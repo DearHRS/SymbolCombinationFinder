@@ -3,15 +3,15 @@ finds combination of '+', '-', '*' and '/' between given numbers to get a given 
 
 (work in progress)
 
-so far added:
+so far done:
   1. functions to get and store multiple inputs from user
   2. function to generate '+' '-' '*' '/' for given inputs
   3. function to solve arithmetic expression
+  4. use and display of arithmetic solving function
   
   
 to do:
-  1. make use of arithmetic solving function
-  2. make function to generate all possible combination of brackets for given numbers
-  3. make wrapper function for arithmetic solving function to incorporate brackets
-  4. add logic to solve and store possible result(s) if not closest possible result
+  1. make function to generate all possible combination of brackets for given numbers
+  2. make wrapper function for arithmetic solving function to incorporate brackets
+  3. add logic to solve and store possible result(s) if not closest possible result
   
