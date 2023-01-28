@@ -75,8 +75,8 @@ double ArithmeticatorPrimitive(std::vector<double> numberCombination, std::vecto
 }
 
 int main(){
-    std::vector<double> numberVector = {2, 2, 2, 2, 2, 2};
-    std::vector<int> symbolVector = {1, 2, 2, 3, 3};
+    std::vector<double> numberVector = {1, 2, 3, 4, 5, 6};
+    std::vector<int> symbolVector = {0, 1, 2, 3, 0};
 
     for (unsigned int i = 0; i < symbolVector.size(); i++) {
         std::cout << numberVector[i];

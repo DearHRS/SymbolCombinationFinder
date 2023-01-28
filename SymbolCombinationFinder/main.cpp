@@ -41,22 +41,39 @@ int main()
 {
     //initializing variables
     std::vector<std::vector<int>> symbolCombinations;   //dynamic array to store all combinations of arthmetic symbols
-    std::vector<double> numberCombination;              //dynamic array to store number combinations
+    std::vector<double> numberCombinations;             //dynamic array to store number combinations
     double targettedValue;                              //value user wants to get
     //think of someway to store answer and its expression
 
     
     //getting user inputs
-    SetManyDoubleInput(numberCombination, "Enter combination of numbers with spaces in between: ");
+    SetManyDoubleInput(numberCombinations, "Enter combination of numbers with spaces in between: ");
     SetSingleDoubleInput(targettedValue, "Enter the targetted value: ");
     
     //generating automated inputs
-    GenerateSymbolCombinations(symbolCombinations, numberCombination.size());
+    GenerateSymbolCombinations(symbolCombinations, numberCombinations.size() - 1);
     
 
     //calculations
     for (unsigned int i = 0; i < symbolCombinations.size(); i++) {
-
+        for (unsigned int j = 0; j < symbolCombinations[i].size(); j++) {
+            std::cout << numberCombinations[j];
+            switch (symbolCombinations[i][j]) {
+            case 0:
+                std::cout << " + ";
+                break;
+            case 1:
+                std::cout << " - ";
+                break;
+            case 2:
+                std::cout << " * ";
+                break;
+            case 3:
+                std::cout << " / ";
+                break;
+            }
+        }
+        std::cout << numberCombinations[numberCombinations.size() - 1] << " = " << ArithmeticatorPrimitive(numberCombinations, symbolCombinations[i]) << "\n\n";
     }
 
     //end
@@ -76,8 +93,6 @@ void SetSingleDoubleInput(double& givenDouble, std::string invitation)
         std::cout << invitation;
         
         std::getline(std::cin, testString);
-        std::cin.clear();
-        std::cin.ignore();
 
         if (IsNumeric(testString)) {
             givenDouble = std::stod(testString);
@@ -100,8 +115,6 @@ void SetManyDoubleInput(std::vector<double>& givenVector, std::string invitation
         //input handling
         std::cout << invitation;
         std::getline(std::cin, testString);
-        std::cin.clear();
-        std::cin.ignore();
 
         //breaking string by spaces
         stringVector = SplitStringBySpace(testString);
