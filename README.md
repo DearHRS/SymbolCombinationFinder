@@ -18,6 +18,7 @@ to do:
 Goal isn't targetted towards speed at the moment, thus programme has only been tested for small input sizes.
 
 Result from current iteration of programme for given input "4 2 6 7":
+
 4 + 2 + 6 + 7 = 19
 
 4 + 2 + 6 - 7 = 5
